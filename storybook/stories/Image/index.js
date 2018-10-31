@@ -2,5 +2,5 @@
 import Image from './Image';
 
 export {
-    Image
+    Image as default
 };

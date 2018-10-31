@@ -2,7 +2,7 @@
 import type { Node } from 'react';
 import type { StyleObj } from 'react-native/Libraries/StyleSheet/StyleSheetTypes';
 
-import type { ColorsType } from '~/styles/colors';
+import type { ColorsType } from '../styles';
 
 export type ButtonPropsType = {
     children?: Node;

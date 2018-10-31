@@ -2,5 +2,5 @@
 import Divider from './Divider';
 
 export {
-    Divider
+    Divider as default
 };

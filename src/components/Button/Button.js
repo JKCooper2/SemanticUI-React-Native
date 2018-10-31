@@ -6,10 +6,10 @@ import _ from 'lodash';
 import { spacing, colors } from '~/styles';
 import Icon from '~/components/Icon';
 
-import type { ButtonPropsType } from '#/components/Button';
-import type { ColorsType } from '#/styles';
+import type { ButtonPropsType } from '~/types/components/Button';
+import type { ColorsType } from '~/types/styles';
 
-const getBackgroundColor = (primary: boolean, secondary: boolean, color: string, positive: boolean, negative: boolean): ColorsType => {
+const getBackgroundColor = (primary: boolean, secondary: boolean, color: ColorsType, positive: boolean, negative: boolean): string => {
     if (primary) {
         return colors.colors.primary;
     }
@@ -29,7 +29,7 @@ const getBackgroundColor = (primary: boolean, secondary: boolean, color: string,
     return _.get(colors.colors, [color], colors.button.default);
 };
 
-const getTextColor = (primary: boolean, secondary: boolean, color: boolean, positive: boolean, negative: boolean): ColorsType => {
+const getTextColor = (primary: boolean, secondary: boolean, color: ColorsType, positive: boolean, negative: boolean): string => {
     if (primary || secondary || color || positive || negative) {
         return colors.colors.white;
     }
@@ -47,7 +47,9 @@ class Button extends PureComponent<ButtonPropsType> {
         negative: false,
         fluid: false,
         circular: false,
-        icon: false
+        icon: false,
+        active: false,
+        toggle: false
     };
 
     render() {
@@ -56,7 +58,8 @@ class Button extends PureComponent<ButtonPropsType> {
         let selectedChildren = content || children;
 
         if (_.isString(icon)) {
-            selectedChildren = <Icon name={icon} />;
+            let newIcon = ((icon: any): string); // Flow casting
+            selectedChildren = <Icon name={newIcon} />;
         }
 
         const backgroundColor = getBackgroundColor(primary, secondary, color, positive, negative);

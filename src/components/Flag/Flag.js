@@ -5,7 +5,7 @@ import FlagIcon from 'react-native-flags';
 
 import _ from 'lodash';
 
-import type { FlagPropsType } from '#/components/Flag';
+import type { FlagPropsType } from '~/types/components/Flag';
 
 let SIZES = {
     tiny: 16,

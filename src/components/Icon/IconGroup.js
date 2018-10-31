@@ -4,7 +4,7 @@ import { View, StyleSheet } from 'react-native';
 
 import _ from 'lodash';
 
-import type { IconGroupPropsType } from '#/Icon';
+import type { IconGroupPropsType } from '~/types/components/Icon';
 
 let SIZES = {
     mini: 8,

@@ -71,7 +71,6 @@ containerStories.add('Text Align', () => (
         <Container textAlign='left'><Text>Left Aligned</Text></Container>
         <Container textAlign='center'><Text>Center Aligned</Text></Container>
         <Container textAlign='right'><Text>Right Aligned</Text></Container>
-        <Container textAlign='justified'><Text>Justified</Text></Container>
     </Fragment>
 ));
 

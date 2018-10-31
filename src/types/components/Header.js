@@ -1,4 +1,5 @@
 // @flow
+import type { Node } from 'react';
 import type { StyleObj } from 'react-native/Libraries/StyleSheet/StyleSheetTypes';
 import type { ColorsType, TextAlignType } from '../styles';
 
@@ -7,7 +8,7 @@ export type SizeType = "huge" | "large" | "medium" | "small" | "tiny";
 
 export type HeaderPropsType = {
     as: AsType;
-    size: SizeType;
+    size?: SizeType;
     sub: boolean;
     content: string;
     subheader: string;

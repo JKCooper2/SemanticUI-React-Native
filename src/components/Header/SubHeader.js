@@ -6,7 +6,7 @@ import _ from 'lodash';
 import { getFontSize } from './utils';
 import { colors } from '~/styles';
 
-import type { SubheaderPropsType } from '#/components/Header';
+import type { SubheaderPropsType } from '~/types/components/Header';
 
 class SubHeader extends PureComponent<SubheaderPropsType> {
     static defaultProps = {
@@ -22,7 +22,7 @@ class SubHeader extends PureComponent<SubheaderPropsType> {
         }
 
         return (
-            <Text style={[{ fontSize: getFontSize(this.props.as, '', 'h4'), color: colors.fonts.subheading }, style]}>{children}</Text>
+            <Text style={[{ fontSize: getFontSize(this.props.as, null, 'h4'), color: colors.fonts.subheading }, style]}>{children}</Text>
         );
     }
 }

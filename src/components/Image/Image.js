@@ -4,7 +4,7 @@ import { Image } from 'react-native';
 
 import _ from 'lodash';
 
-import type { ImagePropsType } from '#/components/Image';
+import type { ImagePropsType } from '~/types/components/Image';
 
 let SIZES = {
     mini: 20,

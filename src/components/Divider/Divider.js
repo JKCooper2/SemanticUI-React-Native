@@ -7,8 +7,8 @@ import _ from 'lodash';
 
 import { spacing, fonts, colors } from '~/styles';
 
-import type { DividerPropsType } from '#/components/Divider';
-import type { ColorsType } from '#/styles';
+import type { DividerPropsType } from '~/types/components/Divider';
+import type { ColorsType } from '~/types/styles';
 
 const getHeight = (fitted: boolean, section: boolean, clearing: boolean): StyleObj => {
     if (fitted) {

@@ -2,5 +2,5 @@
 import Flag from './Flag';
 
 export {
-    Flag
+    Flag as default
 };

@@ -21,12 +21,12 @@ import Octicons from 'react-native-vector-icons/Octicons';
 import SimpleLineIcons from 'react-native-vector-icons/SimpleLineIcons';
 import Zocial from 'react-native-vector-icons/Zocial';
 
-
 import { spacing, colors } from '~/styles';
 
+import type { IconPropsType } from '~/types/components/Icon';
+import type { ColorsType } from '~/types/styles';
+
 import IconGroup from './IconGroup';
-import type { IconPropsType } from '#/Icon';
-import type { ColorsType } from '#/styles';
 
 let SIZES = {
     mini: 8,
@@ -55,7 +55,7 @@ let TYPE = {
     zocial: Zocial
 };
 
-const getColor = (color: ColorsType, disabled: boolean): ColorsType => {
+const getColor = (color: ColorsType, disabled: boolean): string => {
     if (disabled) {
         return colors.colors.lightGrey;
     }

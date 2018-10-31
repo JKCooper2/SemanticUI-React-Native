@@ -2,5 +2,5 @@
 import Container from './Container';
 
 export {
-    Container
+    Container as default
 };

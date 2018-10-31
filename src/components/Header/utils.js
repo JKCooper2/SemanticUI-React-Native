@@ -2,8 +2,8 @@
 import _ from 'lodash';
 import { fonts, colors } from '~/styles';
 
-import type { ColorsType } from '#/styles';
-import type { AsType, SizeType } from '#/components/Header';
+import type { ColorsType } from '~/types/styles';
+import type { AsType, SizeType } from '~/types/components/Header';
 
 const SIZE = {
     huge: 'h1',
@@ -13,7 +13,7 @@ const SIZE = {
     tiny: 'h5'
 };
 
-export const getFontSize = (asProp: AsType, size: SizeType, fallback: string = 'h2'): number => {
+export const getFontSize = (asProp: AsType, size: ?SizeType, fallback: string = 'h2'): number => {
     let asSize = size && SIZE[size]
         ? SIZE[size]
         : asProp;

@@ -70,7 +70,7 @@ buttonStories.add('Circular', () => (
 
 buttonStories.add('Icon', () => (
     <Fragment>
-        <Button icon >
+        <Button icon>
             <Icon name="rocket" />
         </Button>
         <Button icon="rocket" />

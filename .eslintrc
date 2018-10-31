@@ -20,7 +20,8 @@
     },
     "plugins": [
         "react",
-        "react-native"
+        "react-native",
+        "flowtype"
     ],
     "extends": [
         "eslint:recommended",
@@ -50,6 +51,7 @@
         "import/prefer-default-export": 0,
         "import/no-extraneous-dependencies": 0,
         "import/no-unresolved": 0,
-        "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }]
+        "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }],
+        "flowtype/define-flow-type": 1
     }
 }

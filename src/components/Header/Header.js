@@ -7,7 +7,7 @@ import { spacing, colors } from '~/styles';
 
 import { getFontSize, getFontColor } from './utils';
 
-import { HeaderPropsType } from '#/components/Header';
+import type { HeaderPropsType } from '~/types/components/Header';
 
 import SubHeader from './SubHeader';
 
@@ -19,12 +19,13 @@ class Header extends PureComponent<HeaderPropsType> {
 
     static defaultProps = {
         sub: false,
-        size: 'h2',
+        as: 'h2',
         disabled: false,
         content: '',
         subheader: '',
         color: colors.colors.black,
-        textAlign: 'left'
+        textAlign: 'left',
+        inverted: false
     };
 
     render() {
