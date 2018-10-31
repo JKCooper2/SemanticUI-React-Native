@@ -1,40 +1,29 @@
 // @flow
 import React, { PureComponent } from 'react';
-
 import { View, Text } from 'react-native';
 import _ from 'lodash';
 
-import { spacing } from '~/styles';
-import type { colorsType } from '~/styles/colors';
+import { spacing, colors } from '~/styles';
 
 import { getFontSize, getFontColor } from './utils';
 
-import SubHeader from './SubHeader';
+import { HeaderPropsType } from '#/components/Header';
 
-type Props = {
-    as: "h1" | "h2" | "h3" | "h4" | "h5" | "h6",
-    size?: "huge" | "large" | "medium" | "small" | "tiny",
-    sub?: boolean,
-    content?: string,
-    subheader?: string,
-    disabled?: boolean,
-    color?: colorsType,
-    textAlign?: "left" | "center" | "right"
-};
+import SubHeader from './SubHeader';
 
 // TODO: Icon, Image, Divider
 // TODO: Block, Attached
-// FIXME: floated doesn't exist
 
-class Header extends PureComponent<Props> {
+class Header extends PureComponent<HeaderPropsType> {
     static SubHeader = SubHeader;
 
     static defaultProps = {
         sub: false,
+        size: 'h2',
         disabled: false,
         content: '',
         subheader: '',
-        color: 'black',
+        color: colors.colors.black,
         textAlign: 'left'
     };
 

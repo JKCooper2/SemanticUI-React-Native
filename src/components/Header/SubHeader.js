@@ -1,22 +1,16 @@
 // @flow
 import React, { PureComponent } from 'react';
-import type { Node } from 'react';
-import type { StyleObj } from 'react-native/Libraries/StyleSheet/StyleSheetTypes';
-
 import { Text } from 'react-native';
 import _ from 'lodash';
 
 import { getFontSize } from './utils';
 import { colors } from '~/styles';
 
-type Props = {
-    children: Node,
-    style?: StyleObj,
-    as: "h1" | "h2" | "h3" | "h4" | "h5" | "h6",
-};
+import type { SubheaderPropsType } from '#/components/Header';
 
-class SubHeader extends PureComponent<Props> {
+class SubHeader extends PureComponent<SubheaderPropsType> {
     static defaultProps = {
+        as: 'h4'
     };
 
     render() {

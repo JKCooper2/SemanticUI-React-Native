@@ -3,6 +3,7 @@
 import React, { PureComponent } from 'react';
 
 import { View, Animated, StyleSheet, Easing } from 'react-native';
+import type AnimatedValue from 'react-native/Libraries/Animated/src/nodes/AnimatedValue';
 
 import _ from 'lodash';
 
@@ -20,23 +21,12 @@ import Octicons from 'react-native-vector-icons/Octicons';
 import SimpleLineIcons from 'react-native-vector-icons/SimpleLineIcons';
 import Zocial from 'react-native-vector-icons/Zocial';
 
+
 import { spacing, colors } from '~/styles';
 
 import IconGroup from './IconGroup';
-
-type Props = {
-    name: string;
-    type?: string;
-    color?: string;
-    size?: string;
-    flipped?: string;
-    fitted?: boolean;
-    loading?: boolean;
-    disabled?: boolean;
-    circular?: boolean;
-    bordered?: boolean;
-    inverted?: boolean;
-};
+import type { IconPropsType } from '#/Icon';
+import type { ColorsType } from '#/styles';
 
 let SIZES = {
     mini: 8,
@@ -65,7 +55,7 @@ let TYPE = {
     zocial: Zocial
 };
 
-const getColor = (color, disabled) => {
+const getColor = (color: ColorsType, disabled: boolean): ColorsType => {
     if (disabled) {
         return colors.colors.lightGrey;
     }
@@ -73,7 +63,7 @@ const getColor = (color, disabled) => {
     return _.get(colors.colors, color, colors.colors.grey);
 };
 
-class Icon extends PureComponent<Props> {
+class Icon extends PureComponent<IconPropsType> {
     static defaultProps = {
         type: 'fontAwesome5',
         color: colors.colors.grey,
@@ -89,7 +79,9 @@ class Icon extends PureComponent<Props> {
 
     static Group = IconGroup;
 
-    constructor(props) {
+    spinValue: AnimatedValue;
+
+    constructor(props: IconPropsType) {
         super(props);
 
         this.spinValue = new Animated.Value(0);

@@ -1,16 +1,10 @@
 // @flow
 import React, { PureComponent } from 'react';
-import type { Node } from 'react';
-
 import { View, StyleSheet } from 'react-native';
 
 import _ from 'lodash';
 
-type Props = {
-    children: Array<Node>;
-    color?: string;
-    size?: string;
-};
+import type { IconGroupPropsType } from '#/Icon';
 
 let SIZES = {
     mini: 8,
@@ -23,7 +17,7 @@ let SIZES = {
     massive: 96
 };
 
-class IconGroup extends PureComponent<Props> {
+class IconGroup extends PureComponent<IconGroupPropsType> {
     static defaultProps = {
         size: 'medium',
     };

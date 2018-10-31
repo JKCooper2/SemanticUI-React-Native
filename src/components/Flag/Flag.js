@@ -5,11 +5,7 @@ import FlagIcon from 'react-native-flags';
 
 import _ from 'lodash';
 
-type Props = {
-    name: string;
-    size?: string;
-    shiny?: boolean;
-};
+import type { FlagPropsType } from '#/components/Flag';
 
 let SIZES = {
     tiny: 16,
@@ -19,7 +15,7 @@ let SIZES = {
     big: 64
 };
 
-class Flag extends PureComponent<Props> {
+class Flag extends PureComponent<FlagPropsType> {
     static defaultProps = {
         size: 'medium',
         shiny: false

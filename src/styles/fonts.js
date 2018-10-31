@@ -1,3 +1,5 @@
+// @flow
+
 const fonts = {
     size: {
         h1: 48,

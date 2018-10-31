@@ -1,29 +1,18 @@
 // @flow
 import React, { PureComponent } from 'react';
-import type { Node } from 'react';
-import type { StyleObj } from 'react-native/Libraries/StyleSheet/StyleSheetTypes';
 
 import { View } from 'react-native';
 
 import { childrenUtils } from '~/libs';
 import { spacing } from '~/styles';
 
-type Props = {
-  children?: Node,
-  content?: Node,
-  fluid?: boolean,
-  text?: boolean,
-  textAlign?: "left" | "center" | "right",
-  style?: StyleObj
-};
+import type { ContainerPropsType } from '#/components/Container';
 
-class Container extends PureComponent<Props> {
+class Container extends PureComponent<ContainerPropsType> {
     static defaultProps = {
         fluid: false,
         text: false,
-        content: null,
         textAlign: 'left',
-        style: {}
     };
 
     render() {

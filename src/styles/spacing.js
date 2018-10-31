@@ -1,3 +1,5 @@
+// @flow
+
 import _ from 'lodash';
 import type { StyleObj } from 'react-native/Libraries/StyleSheet/StyleSheetTypes';
 

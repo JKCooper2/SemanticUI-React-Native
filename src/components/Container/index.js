@@ -1,3 +1,4 @@
+// @flow
 import Container from './Container.js';
 
 export {

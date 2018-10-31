@@ -1,3 +1,4 @@
+// @flow
 import Flag from './Flag';
 
 export {

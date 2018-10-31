@@ -1,32 +1,15 @@
 // @flow
 import React, { PureComponent } from 'react';
-import type { Node } from 'react';
-import type { StyleObj } from 'react-native/Libraries/StyleSheet/StyleSheetTypes';
-
 import { TouchableOpacity, Text, View } from 'react-native';
 import _ from 'lodash';
 
 import { spacing, colors } from '~/styles';
-import Icon from '../Icon';
+import Icon from '~/components/Icon';
 
-type Props = {
-  children?: Node;
-  content?: Node;
-  onPress?: () => mixed;
-  style?: StyleObj;
-  primary?: boolean;
-  secondary?: boolean;
-  compact?: boolean;
-  toggle?: boolean;
-  active?: boolean;
-  positive?: boolean;
-  negative?: boolean;
-  fluid?: boolean;
-  circular?: boolean;
-  icon?: boolean | string;
-};
+import type { ButtonPropsType } from '#/components/Button';
+import type { ColorsType } from '#/styles';
 
-const getBackgroundColor = (primary, secondary, color, positive, negative) => {
+const getBackgroundColor = (primary: boolean, secondary: boolean, color: string, positive: boolean, negative: boolean): ColorsType => {
     if (primary) {
         return colors.colors.primary;
     }
@@ -46,7 +29,7 @@ const getBackgroundColor = (primary, secondary, color, positive, negative) => {
     return _.get(colors.colors, [color], colors.button.default);
 };
 
-const getTextColor = (primary, secondary, color, positive, negative) => {
+const getTextColor = (primary: boolean, secondary: boolean, color: boolean, positive: boolean, negative: boolean): ColorsType => {
     if (primary || secondary || color || positive || negative) {
         return colors.colors.white;
     }
@@ -54,10 +37,8 @@ const getTextColor = (primary, secondary, color, positive, negative) => {
     return colors.colors.grey;
 };
 
-class Button extends PureComponent<Props> {
+class Button extends PureComponent<ButtonPropsType> {
     static defaultProps = {
-        style: {},
-        content: null,
         primary: false,
         secondary: false,
         color: colors.button.default,

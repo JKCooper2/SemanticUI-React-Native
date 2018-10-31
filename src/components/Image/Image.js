@@ -1,18 +1,10 @@
 // @flow
 import React, { PureComponent } from 'react';
-import type { Node } from 'react';
-import type { StyleObj } from 'react-native/Libraries/StyleSheet/StyleSheetTypes';
-
-import { View, Image } from 'react-native';
+import { Image } from 'react-native';
 
 import _ from 'lodash';
 
-import { spacing, fonts, colors } from '~/styles';
-
-type Props = {
-    src: string;
-    size?: string;
-};
+import type { ImagePropsType } from '#/components/Image';
 
 let SIZES = {
     mini: 20,
@@ -25,8 +17,7 @@ let SIZES = {
     massive: 800
 };
 
-
-class Icon extends PureComponent<Props> {
+class Icon extends PureComponent<ImagePropsType> {
     static defaultProps = {
         size: 'medium',
     };

@@ -1,3 +1,5 @@
+// @flow
+
 // TODO: Get proper colours
 const colors = {
     black: 'black',
@@ -22,8 +24,6 @@ const colors = {
 
 // TODO: Invert Colors
 const invertedColors = colors;
-
-export type colorsType = "black" | "white" | "red" | "orange" | "yellow" | "olive" | "green" | "teal" | "blue" | "purple" | "violet" | "pink" | "brown" | "grey" | "lightGrey";
 
 const fonts = {
     heading: colors.black,
