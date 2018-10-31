@@ -44,8 +44,10 @@ class Header extends PureComponent<HeaderPropsType> {
             }
         }
 
+        const alignSelf: {| alignSelf: string |} = _.get(spacing.textAlign, textAlign, spacing.textAlign.left);
+
         return (
-            <View style={[{ padding: spacing.padding.large }, spacing.getAlignment(textAlign)]}>
+            <View style={[{ padding: spacing.padding.large }, alignSelf]}>
                 {node}
                 {!!subheader && <SubHeader>{subheader}</SubHeader>}
             </View>

@@ -25,3 +25,10 @@ export type IconGroupPropsType = {
     color?: ColorsType;
     size: SizeType;
 };
+
+export type IconLibraryPropsType = {
+    name: string;
+    size: number;
+    style: any;
+    color: ColorsType;
+};

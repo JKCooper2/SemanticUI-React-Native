@@ -10,5 +10,5 @@ export type DividerPropsType = {
     section: boolean,
     clearing: boolean,
     inverted: boolean,
-    content?: Node
+    content?: string
 };

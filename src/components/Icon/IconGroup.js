@@ -1,5 +1,6 @@
 // @flow
 import React, { PureComponent } from 'react';
+import type { Node } from 'react';
 import { View, StyleSheet } from 'react-native';
 
 import _ from 'lodash';
@@ -25,11 +26,11 @@ class IconGroup extends PureComponent<IconGroupPropsType> {
     render() {
         const { size, children } = this.props;
 
-        let viewSize = _.get(SIZES, size, SIZES.medium);
+        let viewSize: number = _.get(SIZES, size, SIZES.medium);
 
         return (
             <View style={{ width: viewSize, height: viewSize }}>
-                {React.Children.map(children, child => (
+                {React.Children.map(children, (child: Node) => (
                     <View style={[StyleSheet.absoluteFill, { justifyContent: 'center', alignItems: 'center' }]}>
                         {child}
                     </View>

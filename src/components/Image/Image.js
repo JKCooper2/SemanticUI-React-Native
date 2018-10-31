@@ -25,7 +25,7 @@ class Icon extends PureComponent<ImagePropsType> {
     render() {
         const { src, size } = this.props;
 
-        let width = _.get(SIZES, size, SIZES.medium);
+        let width: number = _.get(SIZES, size, SIZES.medium);
 
         return (
             <Image

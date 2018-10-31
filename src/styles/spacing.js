@@ -1,8 +1,4 @@
 // @flow
-
-import _ from 'lodash';
-import type { StyleObj } from 'react-native/Libraries/StyleSheet/StyleSheetTypes';
-
 const padding = {
     large: 40,
     medium: 20,
@@ -15,7 +11,7 @@ const border = {
     medium: 5
 };
 
-const TEXT_ALIGN = {
+const textAlign = {
     left: {
         alignSelf: 'flex-start'
     },
@@ -27,10 +23,8 @@ const TEXT_ALIGN = {
     },
 };
 
-const getAlignment = (align: string): StyleObj => _.get(TEXT_ALIGN, align, TEXT_ALIGN.left);
-
 export default {
     padding,
     border,
-    getAlignment
+    textAlign
 };

@@ -49,7 +49,8 @@ class Button extends PureComponent<ButtonPropsType> {
         circular: false,
         icon: false,
         active: false,
-        toggle: false
+        toggle: false,
+        content: ''
     };
 
     render() {

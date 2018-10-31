@@ -14,15 +14,12 @@ class SubHeader extends PureComponent<SubheaderPropsType> {
     };
 
     render() {
-        const { children, style } = this.props;
-
-        if (!_.isString(children)) {
-            console.warn('A SubHeader must be passed a string child component');
-            return children;
-        }
+        const { children, style, as: asProp } = this.props;
 
         return (
-            <Text style={[{ fontSize: getFontSize(this.props.as, null, 'h4'), color: colors.fonts.subheading }, style]}>{children}</Text>
+            _.isString(children)
+                ? <Text style={[{ fontSize: getFontSize(asProp, null, 'h4'), color: colors.fonts.subheading }, style]}>{children}</Text>
+                : children
         );
     }
 }

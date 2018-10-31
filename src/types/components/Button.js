@@ -6,7 +6,7 @@ import type { ColorsType } from '../styles';
 
 export type ButtonPropsType = {
     children?: Node;
-    content?: Node;
+    content: string;
     onPress?: () => mixed;
     style?: StyleObj;
     primary: boolean;

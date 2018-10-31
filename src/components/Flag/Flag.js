@@ -24,7 +24,7 @@ class Flag extends PureComponent<FlagPropsType> {
     render() {
         const { name, size, shiny } = this.props;
 
-        let viewSize = _.get(SIZES, size, SIZES.medium);
+        let viewSize: number = _.get(SIZES, size, SIZES.medium);
 
         return (
             <FlagIcon

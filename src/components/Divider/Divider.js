@@ -1,6 +1,6 @@
 // @flow
 import React, { PureComponent } from 'react';
-import type { StyleObj } from 'react-native/Libraries/StyleSheet/StyleSheetTypes';
+import type { Node } from 'react';
 
 import { View, Text, StyleSheet } from 'react-native';
 import _ from 'lodash';
@@ -8,9 +8,8 @@ import _ from 'lodash';
 import { spacing, fonts, colors } from '~/styles';
 
 import type { DividerPropsType } from '~/types/components/Divider';
-import type { ColorsType } from '~/types/styles';
 
-const getHeight = (fitted: boolean, section: boolean, clearing: boolean): StyleObj => {
+const getHeight = (fitted: boolean, section: boolean, clearing: boolean): {| viewHeight: number, barHeight: number |} => {
     if (fitted) {
         return { viewHeight: spacing.padding.tiny, barHeight: spacing.padding.tiny / 2 };
     }
@@ -26,7 +25,7 @@ const getHeight = (fitted: boolean, section: boolean, clearing: boolean): StyleO
     return { viewHeight: spacing.padding.medium, barHeight: spacing.padding.medium / 2 };
 };
 
-const getBarColor = (hidden: boolean, inverted: boolean): ColorsType => {
+const getBarColor = (hidden: boolean, inverted: boolean): string => {
     if (hidden) {
         return colors.colors.transparent;
     }
@@ -44,8 +43,7 @@ class Divider extends PureComponent<DividerPropsType> {
         hidden: false,
         section: false,
         clearing: false,
-        inverted: false,
-        content: null
+        inverted: false
     };
 
     render() {

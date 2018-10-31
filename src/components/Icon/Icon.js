@@ -1,6 +1,7 @@
 // @flow
 // https://oblador.github.io/react-native-vector-icons/
 import React, { PureComponent } from 'react';
+import type { ComponentType } from 'react';
 
 import { View, Animated, StyleSheet, Easing } from 'react-native';
 import type AnimatedValue from 'react-native/Libraries/Animated/src/nodes/AnimatedValue';
@@ -23,12 +24,12 @@ import Zocial from 'react-native-vector-icons/Zocial';
 
 import { spacing, colors } from '~/styles';
 
-import type { IconPropsType } from '~/types/components/Icon';
+import type { IconPropsType, IconLibraryPropsType } from '~/types/components/Icon';
 import type { ColorsType } from '~/types/styles';
 
 import IconGroup from './IconGroup';
 
-let SIZES = {
+const SIZES = {
     mini: 8,
     tiny: 12,
     small: 18,
@@ -39,7 +40,7 @@ let SIZES = {
     massive: 96
 };
 
-let TYPE = {
+const TYPE = {
     antDesign: AntDesign,
     entypo: Entypo,
     evilIcons: EvilIcons,
@@ -118,7 +119,7 @@ class Icon extends PureComponent<IconPropsType> {
             propStyles = { ...propStyles, transform: [{ rotate: '270deg' }] };
         }
 
-        let viewSize = _.get(SIZES, size, SIZES.medium);
+        let viewSize: number = _.get(SIZES, size, SIZES.medium);
 
         const spin = this.spinValue.interpolate({
             inputRange: [0, 1],
@@ -127,7 +128,7 @@ class Icon extends PureComponent<IconPropsType> {
 
         let propColor = getColor(color, disabled);
 
-        let IconType = _.get(TYPE, type, TYPE.fontAwesome5);
+        let IconType: ComponentType<IconLibraryPropsType> = _.get(TYPE, type, TYPE.fontAwesome5);
 
         let IconComp = (
             <IconType
