@@ -1,0 +1,48 @@
+{
+    "parser": "babel-eslint",
+    "env": {
+        "browser": true,
+        "jest": true,
+        "es6": true
+    },
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true,
+            "modules": true
+        }
+    },
+    "plugins": [
+        "react",
+        "react-native"
+    ],
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended",
+        "plugin:react-native/all",
+        "airbnb-base"
+    ],
+    "rules": {
+        "arrow-body-style": "warn",
+        "react/prop-types": 0,
+        "react/display-name": 0,
+        "react-native/no-color-literals": 0,
+        "react-native/no-inline-styles": 0,
+        "react-native/no-raw-text": 0,
+        "linebreak-style": 0,
+        "indent": ["error", 4],
+        "import/extensions": [1, "never", { "json": "always" }],
+        "comma-dangle": 0,
+        "eol-last": 0,
+        "function-paren-newline": 0,
+        "object-property-newline": 0,
+        "object-curly-newline": 0,
+        "max-len": 0,
+        "no-underscore-dangle": 0,
+        "prefer-const": 0,
+        "no-use-before-define": 0,
+        "import/prefer-default-export": 0,
+        "import/no-extraneous-dependencies": 0,
+        "import/no-unresolved": 0,
+        "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }]
+    }
+}
