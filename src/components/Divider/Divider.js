@@ -55,7 +55,9 @@ class Divider extends PureComponent<DividerPropsType> {
 
         let newChildren = _.isString(usedChildren) ? (
             <Text style={{ paddingHorizontal: spacing.padding.medium, fontSize: fonts.size.default, fontWeight: 'bold', color: barColor }}>{children}</Text>
-        ) : children;
+        ) : (
+            children
+        );
 
         return newChildren ? (
             <View style={{ height: viewHeight, alignItems: 'center', flexDirection: 'row' }}>

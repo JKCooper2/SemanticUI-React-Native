@@ -20,7 +20,7 @@ let SIZES = {
 
 class IconGroup extends PureComponent<IconGroupPropsType> {
     static defaultProps = {
-        size: 'medium',
+        size: 'medium'
     };
 
     render() {
@@ -39,6 +39,5 @@ class IconGroup extends PureComponent<IconGroupPropsType> {
         );
     }
 }
-
 
 export default IconGroup;

@@ -95,20 +95,29 @@ class Icon extends PureComponent<IconPropsType> {
     spin = () => {
         if (this.props.loading) {
             this.spinValue.setValue(0);
-            Animated.timing(
-                this.spinValue,
-                {
-                    toValue: 1,
-                    duration: 1000,
-                    easing: Easing.linear,
-                    useNativeDriver: true
-                }
-            ).start(() => this.spin());
+            Animated.timing(this.spinValue, {
+                toValue: 1,
+                duration: 1000,
+                easing: Easing.linear,
+                useNativeDriver: true
+            }).start(() => this.spin());
         }
-    }
+    };
 
     render() {
-        const { name, type, color, size, flipped, fitted, loading, disabled, circular, inverted, bordered } = this.props;
+        const {
+            name,
+            type,
+            color,
+            size,
+            flipped,
+            fitted,
+            loading,
+            disabled,
+            circular,
+            inverted,
+            bordered
+        } = this.props;
 
         let propStyles = {};
 
@@ -136,7 +145,7 @@ class Icon extends PureComponent<IconPropsType> {
                 name={name}
                 size={viewSize}
                 style={{ ...propStyles }}
-                color={inverted ? colors.colors.white : propColor }
+                color={inverted ? colors.colors.white : propColor}
             />
         );
 
@@ -152,9 +161,9 @@ class Icon extends PureComponent<IconPropsType> {
         if (circular) {
             borderStyles = {
                 ...borderStyles,
-                borderRadius: viewSize * 1.5 / 2,
+                borderRadius: (viewSize * 1.5) / 2,
                 width: viewSize * 1.5,
-                height: viewSize * 1.5,
+                height: viewSize * 1.5
             };
         }
 
@@ -163,7 +172,7 @@ class Icon extends PureComponent<IconPropsType> {
                 ...borderStyles,
                 borderRadius: 0,
                 width: viewSize * 1.2,
-                height: viewSize * 1.2,
+                height: viewSize * 1.2
             };
         }
 
@@ -172,13 +181,19 @@ class Icon extends PureComponent<IconPropsType> {
         }
 
         return (
-            <View style={{ marginHorizontal: fitted ? 0 : spacing.padding.tiny, width: viewSize, height: viewSize, ...borderStyles }}>
+            <View
+                style={{
+                    marginHorizontal: fitted ? 0 : spacing.padding.tiny,
+                    width: viewSize,
+                    height: viewSize,
+                    ...borderStyles
+                }}
+            >
                 {loading ? (
-                    <Animated.View style={{ transform: [{ rotate: spin }] }}>
-                        {IconComp}
-                    </Animated.View>
-                ) : IconComp
-                }
+                    <Animated.View style={{ transform: [{ rotate: spin }] }}>{IconComp}</Animated.View>
+                ) : (
+                    IconComp
+                )}
             </View>
         );
     }

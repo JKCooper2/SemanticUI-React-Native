@@ -19,7 +19,7 @@ let SIZES = {
 
 class Icon extends PureComponent<ImagePropsType> {
     static defaultProps = {
-        size: 'medium',
+        size: 'medium'
     };
 
     render() {
@@ -27,13 +27,7 @@ class Icon extends PureComponent<ImagePropsType> {
 
         let width: number = _.get(SIZES, size, SIZES.medium);
 
-        return (
-            <Image
-                source={{ uri: src }}
-                style={{ width, height: width }}
-                resizeMode="contain"
-            />
-        );
+        return <Image source={{ uri: src }} style={{ width, height: width }} resizeMode="contain" />;
     }
 }
 

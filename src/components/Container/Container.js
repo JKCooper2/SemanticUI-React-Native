@@ -12,7 +12,7 @@ class Container extends PureComponent<ContainerPropsType> {
     static defaultProps = {
         fluid: false,
         text: false,
-        textAlign: 'left',
+        textAlign: 'left'
     };
 
     render() {

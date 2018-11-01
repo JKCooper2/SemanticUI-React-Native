@@ -65,7 +65,7 @@ class Button extends PureComponent<ButtonPropsType> {
 
         const backgroundColor = getBackgroundColor(primary, secondary, color, positive, negative);
         const textColor = getTextColor(primary, secondary, color, positive, negative);
-        const buttonPadding = (compact || icon) ? spacing.padding.tiny : spacing.padding.small;
+        const buttonPadding = compact || icon ? spacing.padding.tiny : spacing.padding.small;
 
         const containerAlign = fluid ? 'stretch' : 'flex-start';
 
