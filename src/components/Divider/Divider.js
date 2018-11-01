@@ -1,8 +1,7 @@
 // @flow
 import React, { PureComponent } from 'react';
-import type { Node } from 'react';
-
 import { View, Text, StyleSheet } from 'react-native';
+
 import _ from 'lodash';
 
 import { spacing, fonts, colors } from '~/styles';
@@ -50,7 +49,7 @@ class Divider extends PureComponent<DividerPropsType> {
         const { children, fitted, hidden, section, clearing, inverted, content } = this.props;
 
         let { viewHeight, barHeight } = getHeight(fitted, section, clearing);
-        let barColor = getBarColor(hidden, inverted);
+        let barColor: string = getBarColor(hidden, inverted);
 
         let usedChildren = content || children;
 

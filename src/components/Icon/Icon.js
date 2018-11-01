@@ -100,7 +100,8 @@ class Icon extends PureComponent<IconPropsType> {
                 {
                     toValue: 1,
                     duration: 1000,
-                    easing: Easing.linear
+                    easing: Easing.linear,
+                    useNativeDriver: true
                 }
             ).start(() => this.spin());
         }
@@ -121,7 +122,7 @@ class Icon extends PureComponent<IconPropsType> {
 
         let viewSize: number = _.get(SIZES, size, SIZES.medium);
 
-        const spin = this.spinValue.interpolate({
+        const spin = loading && this.spinValue.interpolate({
             inputRange: [0, 1],
             outputRange: ['0deg', '360deg']
         });

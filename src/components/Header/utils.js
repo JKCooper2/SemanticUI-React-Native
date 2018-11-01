@@ -21,7 +21,7 @@ export const getFontSize = (asProp: AsType, size: ?SizeType, fallback: string = 
     return _.get(fonts.size, [asSize], fonts.size[fallback]);
 };
 
-export const getFontColor = (color: ColorsType, inverted: boolean, disabled: boolean): ColorsType => {
+export const getFontColor = (color: ColorsType, inverted: boolean, disabled: boolean): string => {
     if (disabled) {
         return colors.fonts.disabled;
     }

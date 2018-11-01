@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<Component
+  style={
+    Object {
+      "alignItems": "flex-start",
+      "marginHorizontal": 5,
+    }
+  }
+>
+  <TouchableOpacity
+    activeOpacity={0.2}
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#d3d3d3",
+        "borderRadius": 5,
+        "minWidth": 40,
+        "padding": 10,
+      }
+    }
+  />
+</Component>
+`;

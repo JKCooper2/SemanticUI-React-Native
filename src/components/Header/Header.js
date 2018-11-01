@@ -5,11 +5,10 @@ import _ from 'lodash';
 
 import { spacing, colors } from '~/styles';
 
-import { getFontSize, getFontColor } from './utils';
-
 import type { HeaderPropsType } from '~/types/components/Header';
 
 import SubHeader from './SubHeader';
+import { getFontSize, getFontColor } from './utils';
 
 // TODO: Icon, Image, Divider
 // TODO: Block, Attached
