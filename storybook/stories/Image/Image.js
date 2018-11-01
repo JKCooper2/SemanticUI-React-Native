@@ -1,6 +1,6 @@
 // @flow
-import React, { Fragment } from 'react';
-import { View, Text, ScrollView } from 'react-native';
+import React from 'react';
+import { ScrollView } from 'react-native';
 
 import { storiesOf } from '@storybook/react-native';
 
@@ -9,7 +9,7 @@ import Image from '~/components/Image';
 const imageStories = storiesOf('Image', module);
 
 imageStories.add('Standard', () => (
-    <Image src="https://react.semantic-ui.com/images/wireframe/image.png" size="small"/>
+    <Image src="https://react.semantic-ui.com/images/wireframe/image.png" size="small" />
 ));
 
 imageStories.add('Sizes', () => (

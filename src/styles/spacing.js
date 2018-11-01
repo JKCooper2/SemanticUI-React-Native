@@ -19,8 +19,8 @@ const textAlign = {
         alignSelf: 'flex-end'
     },
     center: {
-        alignSelf: 'center',
-    },
+        alignSelf: 'center'
+    }
 };
 
 export default {

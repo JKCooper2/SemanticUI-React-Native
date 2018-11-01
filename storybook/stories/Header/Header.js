@@ -51,35 +51,35 @@ headerStories.add('Text Align', () => (
 
 headerStories.add('Color', () => (
     <ScrollView>
-        <Header as='h4' color='red'> Red </Header>
-        <Header as='h4' color='orange'> Orange </Header>
-        <Header as='h4' color='yellow'> Yellow </Header>
-        <Header as='h4' color='olive'> Olive </Header>
-        <Header as='h4' color='green'> Green </Header>
-        <Header as='h4' color='teal'> Teal </Header>
-        <Header as='h4' color='blue'> Blue </Header>
-        <Header as='h4' color='purple'> Purple </Header>
-        <Header as='h4' color='violet'> Violet </Header>
-        <Header as='h4' color='pink'> Pink </Header>
-        <Header as='h4' color='brown'> Brown </Header>
-        <Header as='h4' color='grey'> Grey </Header>
+        <Header as='h4' color='red'>Red</Header>
+        <Header as='h4' color='orange'>Orange</Header>
+        <Header as='h4' color='yellow'>Yellow</Header>
+        <Header as='h4' color='olive'>Olive</Header>
+        <Header as='h4' color='green'>Green</Header>
+        <Header as='h4' color='teal'>Teal</Header>
+        <Header as='h4' color='blue'>Blue</Header>
+        <Header as='h4' color='purple'>Purple</Header>
+        <Header as='h4' color='violet'>Violet</Header>
+        <Header as='h4' color='pink'>Pink</Header>
+        <Header as='h4' color='brown'>Brown</Header>
+        <Header as='h4' color='grey'>Grey</Header>
     </ScrollView>
 ));
 
 headerStories.add('Inverted', () => (
     <ScrollView style={{ backgroundColor: 'black' }}>
-        <Header as='h4' color='red' inverted> Red </Header>
-        <Header as='h4' color='orange' inverted> Orange </Header>
-        <Header as='h4' color='yellow' inverted> Yellow </Header>
-        <Header as='h4' color='olive' inverted> Olive </Header>
-        <Header as='h4' color='green' inverted> Green </Header>
-        <Header as='h4' color='teal' inverted> Teal </Header>
-        <Header as='h4' color='blue' inverted> Blue </Header>
-        <Header as='h4' color='purple' inverted> Purple </Header>
-        <Header as='h4' color='violet' inverted> Violet </Header>
-        <Header as='h4' color='pink' inverted> Pink </Header>
-        <Header as='h4' color='brown' inverted> Brown </Header>
-        <Header as='h4' color='grey' inverted> Grey </Header>
+        <Header as='h4' color='red' inverted>Red</Header>
+        <Header as='h4' color='orange' inverted>Orange</Header>
+        <Header as='h4' color='yellow' inverted>Yellow</Header>
+        <Header as='h4' color='olive' inverted>Olive</Header>
+        <Header as='h4' color='green' inverted>Green</Header>
+        <Header as='h4' color='teal' inverted>Teal</Header>
+        <Header as='h4' color='blue' inverted>Blue</Header>
+        <Header as='h4' color='purple' inverted>Purple</Header>
+        <Header as='h4' color='violet' inverted>Violet</Header>
+        <Header as='h4' color='pink' inverted>Pink</Header>
+        <Header as='h4' color='brown' inverted>Brown</Header>
+        <Header as='h4' color='grey' inverted>Grey</Header>
     </ScrollView>
 ));
 

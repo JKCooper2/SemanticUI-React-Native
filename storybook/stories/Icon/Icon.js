@@ -8,9 +8,7 @@ import Icon from '~/components/Icon';
 
 const iconStories = storiesOf('Icon', module);
 
-iconStories.add('Standard', () => (
-    <Icon name="rocket" />
-));
+iconStories.add('Standard', () => <Icon name="rocket" />);
 
 iconStories.add('Type', () => (
     <Fragment>
@@ -30,10 +28,7 @@ iconStories.add('Type', () => (
     </Fragment>
 ));
 
-iconStories.add('Color', () => (
-    <Icon name="rocket" color="red" />
-));
-
+iconStories.add('Color', () => <Icon name="rocket" color="red" />);
 
 iconStories.add('Size', () => (
     <Fragment>
@@ -58,18 +53,22 @@ iconStories.add('Flipped', () => (
 
 iconStories.add('Fitted', () => (
     <Fragment>
-        <View style={{ display: 'flex', flexDirection: 'row' }}><Text>IC</Text><Icon name="rocket" /><Text>ON</Text></View>
-        <View style={{ display: 'flex', flexDirection: 'row' }}><Text>IC</Text><Icon name="rocket" fitted /><Text>ON</Text></View>
+        <View style={{ display: 'flex', flexDirection: 'row' }}>
+            <Text>IC</Text>
+            <Icon name="rocket" />
+            <Text>ON</Text>
+        </View>
+        <View style={{ display: 'flex', flexDirection: 'row' }}>
+            <Text>IC</Text>
+            <Icon name="rocket" fitted />
+            <Text>ON</Text>
+        </View>
     </Fragment>
 ));
 
-iconStories.add('Loading', () => (
-    <Icon name="rocket" loading />
-));
+iconStories.add('Loading', () => <Icon name="rocket" loading />);
 
-iconStories.add('Disabled', () => (
-    <Icon name="rocket" disabled />
-));
+iconStories.add('Disabled', () => <Icon name="rocket" disabled />);
 
 iconStories.add('Circular', () => (
     <Fragment>

@@ -11,4 +11,4 @@ export type ContainerPropsType = {
     text: boolean,
     textAlign: TextAlignType,
     style?: StyleObj
-  };
+};

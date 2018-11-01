@@ -6,9 +6,7 @@ import Flag from '~/components/Flag';
 
 const flagStories = storiesOf('Flag', module);
 
-flagStories.add('Standard', () => (
-    <Flag name="au" />
-));
+flagStories.add('Standard', () => <Flag name="au" />);
 
 flagStories.add('Sizes', () => (
     <Fragment>

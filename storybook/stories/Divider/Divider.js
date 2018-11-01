@@ -16,22 +16,20 @@ dividerStories.add('Standard', () => (
     </Fragment>
 ));
 
-dividerStories.add('String Child', () => (
-    <Divider>Test</Divider>
-));
+dividerStories.add('String Child', () => <Divider>Test</Divider>);
 
-dividerStories.add('Content', () => (
-    <Divider content="Test" />
-));
+dividerStories.add('Content', () => <Divider content="Test" />);
 
 dividerStories.add('React Child', () => (
-    <Divider><Text>Test</Text></Divider>
+    <Divider>
+        <Text>Test</Text>
+    </Divider>
 ));
 
 dividerStories.add('Fitted', () => (
     <Fragment>
         <Text>Header Above</Text>
-        <Divider fitted/>
+        <Divider fitted />
         <Text>Header Below</Text>
     </Fragment>
 ));
@@ -39,7 +37,7 @@ dividerStories.add('Fitted', () => (
 dividerStories.add('Section', () => (
     <Fragment>
         <Text>Header Above</Text>
-        <Divider section/>
+        <Divider section />
         <Text>Header Below</Text>
     </Fragment>
 ));
@@ -47,7 +45,7 @@ dividerStories.add('Section', () => (
 dividerStories.add('Clearing', () => (
     <Fragment>
         <Text>Header Above</Text>
-        <Divider clearing/>
+        <Divider clearing />
         <Text>Header Below</Text>
     </Fragment>
 ));
@@ -55,7 +53,7 @@ dividerStories.add('Clearing', () => (
 dividerStories.add('Hidden', () => (
     <Fragment>
         <Text>Header Above</Text>
-        <Divider hidden/>
+        <Divider hidden />
         <Text>Header Below</Text>
     </Fragment>
 ));
@@ -67,6 +65,5 @@ dividerStories.add('Inverted', () => (
         <Text>Header Below</Text>
     </View>
 ));
-
 
 export default dividerStories;

@@ -7,9 +7,7 @@ import Header from '~/components/Header';
 
 const subheaderStories = storiesOf('SubHeader', module);
 
-subheaderStories.add('Basic', () => (
-    <Header.SubHeader>Basic SubHeader</Header.SubHeader>
-));
+subheaderStories.add('Basic', () => <Header.SubHeader>Basic SubHeader</Header.SubHeader>);
 
 subheaderStories.add('As', () => (
     <Fragment>

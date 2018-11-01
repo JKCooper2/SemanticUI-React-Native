@@ -8,24 +8,11 @@ import Icon from '~/components/Icon';
 
 const buttonStories = storiesOf('Button', module);
 
-buttonStories.add('Standard', () => (
-    <Button>
-        Button
-    </Button>
-));
+buttonStories.add('Standard', () => <Button>Button</Button>);
 
-buttonStories.add('Primary', () => (
-    <Button primary>
-        Primary
-    </Button>
-));
+buttonStories.add('Primary', () => <Button primary>Primary</Button>);
 
-
-buttonStories.add('Secondary', () => (
-    <Button secondary>
-        Secondary
-    </Button>
-));
+buttonStories.add('Secondary', () => <Button secondary>Secondary</Button>);
 
 buttonStories.add('Colors', () => (
     <Fragment>
@@ -59,14 +46,9 @@ buttonStories.add('Positive/Negative', () => (
     </Fragment>
 ));
 
-buttonStories.add('Fluid', () => (
-    <Button fluid content="Fluid" />
-));
+buttonStories.add('Fluid', () => <Button fluid content="Fluid" />);
 
-
-buttonStories.add('Circular', () => (
-    <Button circular content="C" />
-));
+buttonStories.add('Circular', () => <Button circular content="C" />);
 
 buttonStories.add('Icon', () => (
     <Fragment>
