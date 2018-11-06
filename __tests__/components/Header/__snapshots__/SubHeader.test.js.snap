@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<Component
+  style={
+    Array [
+      Object {
+        "color": "grey",
+        "fontSize": 24,
+      },
+      undefined,
+    ]
+  }
+>
+  SubHeader
+</Component>
+`;

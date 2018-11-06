@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<Component
+  style={
+    Object {
+      "height": 24,
+      "width": 24,
+    }
+  }
+>
+  <Component
+    key=".0"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {
+          "alignItems": "center",
+          "justifyContent": "center",
+        },
+      ]
+    }
+  >
+    <Icon
+      bordered={false}
+      circular={false}
+      color="grey"
+      disabled={false}
+      fitted={false}
+      flipped=""
+      inverted={false}
+      loading={false}
+      name="rocket"
+      size="medium"
+      type="fontAwesome5"
+    />
+  </Component>
+</Component>
+`;

@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<Component
+  style={
+    Object {
+      "flexDirection": "row",
+      "height": 20,
+    }
+  }
+>
+  <Component
+    style={
+      Array [
+        Object {
+          "borderColor": "#d3d3d3",
+          "height": 10,
+        },
+        Object {
+          "borderBottomWidth": 0.5,
+          "borderStyle": "solid",
+          "flex": 1,
+        },
+      ]
+    }
+  />
+</Component>
+`;

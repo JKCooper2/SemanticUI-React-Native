@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<Component
+  style={
+    Object {
+      "height": 24,
+      "marginHorizontal": 5,
+      "width": 24,
+    }
+  }
+>
+  <FA5iconClass
+    color="grey"
+    light={false}
+    name="rocket"
+    size={24}
+    solid={false}
+    style={Object {}}
+  />
+</Component>
+`;

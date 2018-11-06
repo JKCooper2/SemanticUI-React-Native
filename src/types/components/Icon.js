@@ -34,7 +34,7 @@ export type IconPropsType = {
 };
 
 export type IconGroupPropsType = {
-    children: Array<Node>,
+    children: Node,
     color?: ColorsType,
     size: SizeType
 };

@@ -38,7 +38,7 @@
         "react-native/no-raw-text": 0,
         "linebreak-style": 0,
         "indent": ["error", 4],
-        "import/extensions": [1, "never", { "json": "always" }],
+        "import/extensions": [1, "never", { "json": "always", "png": "always" }],
         "comma-dangle": 0,
         "eol-last": 0,
         "function-paren-newline": 0,

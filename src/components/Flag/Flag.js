@@ -17,6 +17,7 @@ let SIZES = {
 
 class Flag extends PureComponent<FlagPropsType> {
     static defaultProps = {
+        name: '',
         size: 'medium',
         shiny: false
     };

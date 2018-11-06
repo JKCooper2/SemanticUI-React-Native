@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<Component
+  resizeMode="contain"
+  source={
+    Object {
+      "uri": "https://react.semantic-ui.com/logo.png",
+    }
+  }
+  style={
+    Object {
+      "height": 180,
+      "width": 180,
+    }
+  }
+/>
+`;
