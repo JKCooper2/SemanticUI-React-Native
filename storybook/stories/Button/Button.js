@@ -2,17 +2,23 @@
 import React, { Fragment } from 'react';
 
 import { storiesOf } from '@storybook/react-native';
+import { withKnobs, text, boolean } from '@storybook/addon-knobs';
 
 import Button from '~/components/Button';
 import Icon from '~/components/Icon';
 
 const buttonStories = storiesOf('Button', module);
+buttonStories.addDecorator(withKnobs);
 
-buttonStories.add('Standard', () => <Button>Button</Button>);
+buttonStories.add('Full', () => (
+    <Button>{text('Text', 'Button')}</Button>
+));
 
-buttonStories.add('Primary', () => <Button primary>Primary</Button>);
+buttonStories.add('Standard', () => <Button>{text('Text', 'Button')}</Button>);
 
-buttonStories.add('Secondary', () => <Button secondary>Secondary</Button>);
+buttonStories.add('Primary', () => <Button primary={boolean('Primary', true)}>Primary</Button>);
+
+buttonStories.add('Secondary', () => <Button secondary={boolean('Secondary', true)}>Secondary</Button>);
 
 buttonStories.add('Colors', () => (
     <Fragment>

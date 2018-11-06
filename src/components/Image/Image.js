@@ -1,6 +1,6 @@
 // @flow
 import React, { PureComponent } from 'react';
-import { Image } from 'react-native';
+import { Image as RNImage } from 'react-native';
 
 import _ from 'lodash';
 
@@ -17,7 +17,7 @@ let SIZES = {
     massive: 800
 };
 
-class Icon extends PureComponent<ImagePropsType> {
+class Image extends PureComponent<ImagePropsType> {
     static defaultProps = {
         size: 'medium'
     };
@@ -27,8 +27,8 @@ class Icon extends PureComponent<ImagePropsType> {
 
         let width: number = _.get(SIZES, size, SIZES.medium);
 
-        return <Image source={{ uri: src }} style={{ width, height: width }} resizeMode="contain" />;
+        return <RNImage source={{ uri: src }} style={{ width, height: width }} resizeMode="contain" />;
     }
 }
 
-export default Icon;
+export default Image;
