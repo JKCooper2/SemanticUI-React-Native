@@ -1,17 +1,37 @@
+/* eslint-disable no-console */
 // @flow
 import React, { Fragment } from 'react';
 
 import { storiesOf } from '@storybook/react-native';
-import { withKnobs, text, boolean } from '@storybook/addon-knobs';
+import { withKnobs, text, boolean, object, select } from '@storybook/addon-ondevice-knobs';
 
 import Button from '~/components/Button';
 import Icon from '~/components/Icon';
+
+import { colors } from '../../helpers';
 
 const buttonStories = storiesOf('Button', module);
 buttonStories.addDecorator(withKnobs);
 
 buttonStories.add('Full', () => (
-    <Button>{text('Text', 'Button')}</Button>
+    <Button
+        content={text('Content', '')}
+        onPress={() => console.log('Button Pressed')}
+        style={object('Styles', {})}
+        primary={boolean('Primary', false)}
+        secondary={boolean('Secondary', false)}
+        compact={boolean('Compact', false)}
+        toggle={boolean('Toggle', false)}
+        active={boolean('Active', false)}
+        positive={boolean('Positive', false)}
+        negative={boolean('Negative', false)}
+        fluid={boolean('Fluid', false)}
+        circular={boolean('Circular', false)}
+        icon={text('Icon', '') || false}
+        color={select('Color', colors, 'Blue')}
+    >
+        {text('Text', 'Button')}
+    </Button>
 ));
 
 buttonStories.add('Standard', () => <Button>{text('Text', 'Button')}</Button>);
