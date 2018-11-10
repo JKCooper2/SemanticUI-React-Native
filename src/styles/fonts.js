@@ -9,7 +9,11 @@ const fonts = {
         h5: 20,
         h6: 16,
         subheading: 24,
-        default: 20
+        default: 20,
+        small: 12
+    },
+    weight: {
+        bold: '500'
     }
 };
 

@@ -3,7 +3,7 @@
 import React, { Fragment } from 'react';
 
 import { storiesOf } from '@storybook/react-native';
-import { withKnobs, text, boolean, object, select } from '@storybook/addon-ondevice-knobs';
+import { withKnobs, text, boolean, object, select } from '@storybook/addon-knobs';
 
 import Button from '~/components/Button';
 import Icon from '~/components/Icon';
@@ -28,7 +28,7 @@ buttonStories.add('Full', () => (
         fluid={boolean('Fluid', false)}
         circular={boolean('Circular', false)}
         icon={text('Icon', '') || false}
-        color={select('Color', colors, 'Blue')}
+        color={select('Color', colors, 'blue')}
     >
         {text('Text', 'Button')}
     </Button>
