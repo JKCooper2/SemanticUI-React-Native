@@ -1,20 +1,20 @@
 // @flow
-// import Container from './Container';
-// import * as Header from './Header';
-// import Divider from './Divider';
-// import Button from './Button';
-// import Icon from './Icon';
-// import Flag from './Flag';
-// import Image from './Image';
+import Container from './Container';
+import * as Header from './Header';
+import Divider from './Divider';
+import Button from './Button';
+import Icon from './Icon';
+import Flag from './Flag';
+import Image from './Image';
 import Label from './Label';
 
 export {
-    // Button,
-    // Container,
-    // Divider,
-    // Header,
-    // Icon,
-    // Flag,
-    // Image,
+    Button,
+    Container,
+    Divider,
+    Header,
+    Icon,
+    Flag,
+    Image,
     Label
 };

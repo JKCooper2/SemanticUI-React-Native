@@ -13,13 +13,11 @@ export default class Group extends PureComponent<GroupProps> {
 
         return (
             <View style={{ flexDirection: 'row', flexWrap: 'wrap' }}>
-                {React.Children.map(this.props.children, (child: Node) => {
-                    return (
-                        <View style={{ paddingHorizontal: 3 }}>
-                            {React.cloneElement(child, overridingProps)}
-                        </View>
-                    );
-                })}
+                {React.Children.map(this.props.children, (child: Node) => (
+                    <View style={{ paddingHorizontal: 3 }}>
+                        {React.cloneElement(child, overridingProps)}
+                    </View>
+                ))}
             </View>
         );
     }

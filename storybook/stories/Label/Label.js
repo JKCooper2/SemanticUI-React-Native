@@ -81,6 +81,6 @@ labelStories.add('Group', () => (
             <Label>8</Label>
         </Label.Group>
     </Fragment>
-))
+));
 
 export default labelStories;
