@@ -1,6 +1,9 @@
 // @flow
+import _ from 'lodash';
 
-const colors = {
+import type { ColorsType } from '~/types/styles';
+
+const colors: ColorsType = {
     black: '#1b1c1d',
     white: '#fff',
     red: '#db2828',
@@ -52,7 +55,8 @@ export default {
     colors: {
         ...colors,
         primary: colors.blue,
-        secondary: colors.black
+        secondary: colors.black,
+        invert: (color: string): ColorsType => _.get(_.invert(colors), color, color)
     },
     invertedColors: {
         ...invertedColors,

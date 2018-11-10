@@ -28,10 +28,20 @@ const getFontColor = (color: ColorsType, basic: boolean): string => {
     return color === colors.colors.lightGrey ? 'rgba(0,0,0,.4)' : 'white';
 };
 
+const SIZES = {
+    mini: 10,
+    tiny: 12,
+    small: 14,
+    medium: 16,
+    large: 20,
+    big: 28,
+    huge: 36,
+    massive: 48
+};
+
 // TODO:
 // - Image
 // - Icon padding
-
 class Label extends PureComponent<LabelProps> {
     static Detail = Detail;
 
@@ -48,20 +58,20 @@ class Label extends PureComponent<LabelProps> {
     };
 
     render() {
-        const { children, color, basic, content, icon, circular } = this.props;
-
-        // console.log(this.props);
+        const { children, color, basic, content, icon, circular, size } = this.props;
 
         let backgroundColor: string = getBackgroundColor(color, basic);
         let borderColor: string = getBorderColor(color, basic);
         let fontColor: string = getFontColor(color, basic);
 
+        let fontSize = _.get(SIZES, size, SIZES.medium);
+
         let textStyles = {
             color: fontColor,
-            fontSize: fonts.size.small,
+            fontSize,
             fontWeight: fonts.weight.bold,
-            paddingHorizontal: spacing.padding.small,
-            paddingVertical: spacing.padding.tiny
+            paddingHorizontal: fontSize / 2,
+            paddingVertical: fontSize / 4
         };
 
         let childComp = React.Children.map(children, (child) => {
@@ -86,7 +96,7 @@ class Label extends PureComponent<LabelProps> {
 
         return (
             <View style={{ borderColor, borderStyle: 'solid', borderWidth: basic ? 1 : 0, flexDirection: 'row', alignSelf: 'flex-start', alignItems: 'center', backgroundColor, borderRadius: circular ? 20 : spacing.border.medium }}>
-                {!!icon && <Icon name={icon} color={fontColor} />}
+                {!!icon && <Icon name={icon} color={color} size={size} />}
                 {childComp}
                 {!!content && <Text style={textStyles}>{content}</Text>}
             </View>

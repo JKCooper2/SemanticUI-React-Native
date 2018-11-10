@@ -46,6 +46,18 @@ labelStories.add('Standard', () => (
 
 labelStories.add('Group', () => (
     <Fragment>
+        <Label.Group size="tiny">
+            <Label>
+                Fun
+                <Icon name="times" />
+            </Label>
+            <Label>
+                Happy
+                <Label.Detail>22</Label.Detail>
+            </Label>
+            <Label>Smart</Label>
+            <Label>Insane</Label>
+        </Label.Group>
         <Label.Group color="blue">
             <Label>
                 Fun
@@ -80,6 +92,19 @@ labelStories.add('Group', () => (
             <Label>7</Label>
             <Label>8</Label>
         </Label.Group>
+    </Fragment>
+));
+
+labelStories.add('Sizes', () => (
+    <Fragment>
+        <Label size="mini">Mini</Label>
+        <Label size="tiny">Tiny</Label>
+        <Label size="small">Small</Label>
+        <Label size="medium">Medium</Label>
+        <Label size="large">Large</Label>
+        <Label size="big">Big</Label>
+        <Label size="huge">Huge</Label>
+        <Label size="massive">Massive</Label>
     </Fragment>
 ));
 
