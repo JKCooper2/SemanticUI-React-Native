@@ -1,6 +1,7 @@
 // @flow
 const padding = {
-    large: 40,
+    huge: 40,
+    large: 30,
     medium: 20,
     small: 10,
     tiny: 5

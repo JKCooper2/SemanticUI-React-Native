@@ -11,7 +11,7 @@ exports[`renders correctly 1`] = `
   }
 >
   <FA5iconClass
-    color="grey"
+    color="#767676"
     light={false}
     name="rocket"
     size={24}

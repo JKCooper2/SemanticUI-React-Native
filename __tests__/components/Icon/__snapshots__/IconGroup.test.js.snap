@@ -30,7 +30,7 @@ exports[`renders correctly 1`] = `
     <Icon
       bordered={false}
       circular={false}
-      color="grey"
+      color="#767676"
       disabled={false}
       fitted={false}
       flipped=""

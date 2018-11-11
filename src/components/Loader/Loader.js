@@ -14,7 +14,7 @@ class Loader extends PureComponent<LoaderProps> {
         let { children, content, active, inverted } = this.props;
 
         return (
-            <View style={{ justifyContent: 'center' }}>
+            <View style={{ justifyContent: 'center', alignItems: 'center' }}>
                 <ActivityIndicator
                     animating={active}
                     color={inverted ? 'white' : 'black'}

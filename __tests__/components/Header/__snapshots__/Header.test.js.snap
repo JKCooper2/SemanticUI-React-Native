@@ -5,7 +5,7 @@ exports[`renders correctly 1`] = `
   style={
     Array [
       Object {
-        "padding": 40,
+        "padding": 30,
       },
       Object {
         "alignSelf": "flex-start",

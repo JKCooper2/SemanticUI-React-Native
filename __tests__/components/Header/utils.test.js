@@ -6,5 +6,5 @@ test('getFontSize - as', () => {
 });
 
 test('getFontColor - disabled', () => {
-    expect(getFontColor('red', false, true)).toBe('#d3d3d3');
+    expect(getFontColor('red', false, true)).toBe('#e8e8e8');
 });

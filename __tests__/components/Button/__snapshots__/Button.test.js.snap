@@ -14,7 +14,7 @@ exports[`renders correctly 1`] = `
     style={
       Object {
         "alignItems": "center",
-        "backgroundColor": "#d3d3d3",
+        "backgroundColor": "#e8e8e8",
         "borderRadius": 5,
         "minWidth": 40,
         "padding": 10,

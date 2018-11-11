@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<Component
+  style={
+    Object {
+      "alignItems": "flex-start",
+      "alignSelf": "stretch",
+      "backgroundColor": "#fff",
+      "borderColor": "#e8e8e8",
+      "borderRadius": 5,
+      "borderStyle": "solid",
+      "borderTopColor": "#e8e8e8",
+      "borderTopWidth": 1,
+      "borderWidth": 1,
+      "justifyContent": "flex-start",
+      "padding": 20,
+    }
+  }
+>
+  <Component
+    key=".0"
+    style={
+      Object {
+        "color": "#1b1c1d",
+      }
+    }
+  >
+    Segment
+  </Component>
+</Component>
+`;

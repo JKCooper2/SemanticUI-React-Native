@@ -13,7 +13,7 @@ exports[`renders correctly 1`] = `
     style={
       Array [
         Object {
-          "borderColor": "#d3d3d3",
+          "borderColor": "#e8e8e8",
           "height": 10,
         },
         Object {

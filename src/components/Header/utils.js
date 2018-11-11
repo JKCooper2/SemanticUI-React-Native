@@ -26,8 +26,12 @@ export const getFontColor = (color: ColorsType, inverted: boolean, disabled: boo
         return colors.fonts.disabled;
     }
 
+    if (inverted && color === colors.colors.black) {
+        return colors.colors.white;
+    }
+
     if (inverted) {
-        _.get(colors.invertedColors, color, colors.fonts.heading);
+        return _.get(colors.invertedColors, color, colors.fonts.heading);
     }
 
     return _.get(colors.colors, color, colors.fonts.heading);

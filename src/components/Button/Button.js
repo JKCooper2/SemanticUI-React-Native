@@ -30,7 +30,7 @@ const getBackgroundColor = (primary: boolean, secondary: boolean, color: ColorsT
 };
 
 const getTextColor = (primary: boolean, secondary: boolean, color: ColorsType, positive: boolean, negative: boolean): string => {
-    if (primary || secondary || color || positive || negative) {
+    if (primary || secondary || color !== colors.button.default || positive || negative) {
         return colors.colors.white;
     }
 

@@ -30,24 +30,34 @@ class Header extends PureComponent<HeaderPropsType> {
     render() {
         const { children, size, sub, style, content, subheader, disabled, color, inverted, textAlign } = this.props;
 
-        let node = null;
-
-        let stringChild = _.isString(children) ? children : content;
         let textColor = getFontColor(color, inverted, disabled);
 
-        if (stringChild) {
+        let contentNode = null;
+
+        if (content) {
             if (sub) {
-                node = <SubHeader style={style}>{stringChild}</SubHeader>;
+                contentNode = <SubHeader style={style}>{content}</SubHeader>;
             } else {
-                node = <Text style={[{ fontSize: getFontSize(this.props.as, size), fontWeight: 'bold', color: textColor }, style]}>{stringChild}</Text>;
+                contentNode = <Text style={[{ fontSize: getFontSize(this.props.as, size), fontWeight: 'bold', color: textColor }, style]}>{content}</Text>;
             }
         }
+
+        let childComp = React.Children.map(children, (child) => {
+            if (!_.isString(child)) {
+                return child;
+            }
+
+            return sub
+                ? <SubHeader style={style}>{child}</SubHeader>
+                : <Text style={[{ fontSize: getFontSize(this.props.as, size), fontWeight: 'bold', color: textColor }, style]}>{child}</Text>;
+        });
 
         const alignSelf: {| alignSelf: string |} = _.get(spacing.textAlign, textAlign, spacing.textAlign.left);
 
         return (
             <View style={[{ padding: spacing.padding.large }, alignSelf]}>
-                {node}
+                {contentNode}
+                {childComp}
                 {!!subheader && <SubHeader>{subheader}</SubHeader>}
             </View>
         );

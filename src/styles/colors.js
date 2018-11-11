@@ -17,8 +17,10 @@ const colors: ColorsType = {
     violet: '#6435c9',
     pink: '#e03997',
     brown: '#a5673f',
+    darkGrey: 'rgba(0,0,0,.6)',
     grey: '#767676',
     lightGrey: '#e8e8e8',
+    lightestGrey: '#f9fafb',
     transparent: 'transparent'
 };
 
@@ -35,9 +37,11 @@ const invertedColors = {
     purple: '#d65aff',
     pink: '#ff74d8',
     brown: '#c86f11',
-    grey: '#cfd0d2',
     black: '#000',
+    darkGrey: 'rgba(0,0,0,.6)',
+    grey: '#cfd0d2',
     lightGrey: '#e8e8e8',
+    lightestGrey: '#f9fafb',
     transparent: 'transparent'
 };
 
