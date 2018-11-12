@@ -8,7 +8,8 @@
 // import Image from './Image';
 // import Label from './Label';
 // import Loader from './Loader';
-import Segment from './Segment';
+// import Segment from './Segment';
+import Input from './Input';
 
 export {
     // Button,
@@ -20,5 +21,6 @@ export {
     // Image,
     // Label,
     // Loader,
-    Segment
+    // Segment,
+    Input
 };
